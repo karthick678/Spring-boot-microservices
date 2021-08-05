@@ -32,6 +32,7 @@ public class DoctorController {
             response = Doctor.class)
     public Optional<Doctor> getDoctorDetails(@PathVariable("id") int id) {
         logger.error("Error happend");
+        logger.info("get doctor details info");
         System.out.println(environment.getProperty("local.server.port"));
         return doctorService.getDoctorDetails(id);
     }

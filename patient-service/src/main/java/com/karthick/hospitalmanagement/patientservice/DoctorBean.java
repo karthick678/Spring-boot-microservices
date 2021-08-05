@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @FeignClient("doctor-service")
 public interface DoctorBean {
-    @RequestMapping("/doctor")
+    @RequestMapping("/api/doctor")
     String doctor();
 
-    @RequestMapping("/getDoctorDetails/{id}")
+    @RequestMapping("/api/getDoctorDetails/{id}")
     Doctor getDoctorDetails(@PathVariable("id") int id);
 }
